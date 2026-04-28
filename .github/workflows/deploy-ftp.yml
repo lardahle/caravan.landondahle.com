@@ -1,0 +1,33 @@
+# Deploy static site to SiteGround (or any FTP host) on push to main.
+# Repo secrets (Settings → Secrets and variables → Actions):
+#   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+# If your FTP user is not chrooted to the site document root, add under `with:` below:
+#   server-dir: /public_html/caravan.landondahle.com/
+# (path must match what Site Tools shows for that subdomain.)
+name: Deploy via FTP
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/README.md
+            **/.gitignore
