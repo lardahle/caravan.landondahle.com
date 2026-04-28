@@ -2,6 +2,13 @@
 
 Static site for the **caravan** subdomain on [landondahle.com](https://landondahle.com).
 
+| Path | What |
+|------|------|
+| `/` | Caravan landing (`index.html`) |
+| `/los-escarenos/` | **Los Escareños** — family site (Víctor Sr. tools, placeholders for each person) |
+
+Same repo, same FTP deploy. Local preview: http://127.0.0.1:4400/los-escarenos/
+
 ## Develop
 
 ```bash

@@ -66,6 +66,19 @@ p.small{
   color:var(--muted);
   line-height:1.6;
 }
+a.fam{
+  display:inline-block;
+  margin-top:28px;
+  padding:12px 20px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  color:var(--accent);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  transition:background .15s,border-color .15s;
+}
+a.fam:hover{background:rgba(107,159,255,.08);border-color:rgba(107,159,255,.35);}
 </style>
 </head>
 <body>
@@ -73,6 +86,7 @@ p.small{
   <p class="k">landondahle.com</p>
   <h1><span>Caravan</span></h1>
   <p class="lead">Static site shell. Replace this page when you have copy, layout, or an app build to drop in.</p>
+  <a class="fam" href="los-escarenos/index.html">Los Escareños — familia</a>
   <p class="small">Repo: lardahle/caravan.landondahle.com · deploy from repository root</p>
 </main>
 </body>

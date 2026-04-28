@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Víctor (Sr.) — Los Escareños</title>
+<meta name="description" content="Herramientas de comunicación y terapia del habla para Víctor.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Courier+Prime&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--void:#0c0d0e;--rim:#3a3f46;--mist:#b8bcc2;--cream:#e8eaec;--bronze:#9a7c3a;--sage:#2d6a4f;--teal:#1a7a5c;}
+html{scroll-behavior:smooth;}
+body{min-height:100vh;background:var(--void);color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;padding:88px 24px 48px;}
+body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;}
+main{position:relative;z-index:1;max-width:480px;margin:0 auto;}
+nav.top{position:fixed;top:0;left:0;right:0;z-index:20;padding:12px 20px;display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;justify-content:space-between;background:rgba(12,13,14,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--rim);}
+nav.top a{font-family:'Courier Prime',monospace;font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mist);text-decoration:none;}
+nav.top a:hover{color:var(--cream);}
+p.k{font-family:'Courier Prime',monospace;font-size:8px;letter-spacing:0.32em;text-transform:uppercase;color:var(--teal);margin-bottom:16px;}
+h1{font-size:clamp(24px,4.5vw,32px);font-weight:600;margin-bottom:8px;}
+h1 em{font-style:italic;font-weight:500;color:var(--bronze);}
+p.sub{font-size:15px;color:var(--mist);line-height:1.65;margin-bottom:32px;}
+.tools{display:flex;flex-direction:column;gap:12px;}
+a.tool{display:flex;flex-direction:column;gap:6px;padding:22px 24px;border:1px solid var(--rim);text-decoration:none;color:var(--cream);background:rgba(17,19,21,0.55);transition:background .2s,border-color .2s;}
+a.tool:hover{background:rgba(30,50,40,0.35);border-color:var(--teal);}
+a.tool .t1{font-size:20px;font-style:italic;font-weight:600;}
+a.tool .t2{font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mist);}
+.hint{font-size:13px;color:var(--mist);margin-top:28px;line-height:1.6;}
+</style>
+</head>
+<body>
+<nav class="top">
+  <a href="../index.html">← Los Escareños</a>
+</nav>
+<main>
+  <p class="k">Esposo · padre</p>
+  <h1>Víctor <em>(Sr.)</em></h1>
+  <p class="sub">Dos herramientas: terapia del habla (ejercicios y modos) y el tablero de comunicación con voz. Abre en tablet o teléfono; no hace falta instalar nada.</p>
+  <div class="tools">
+    <a class="tool" href="terapia-habla.html">
+      <span class="t1">Terapia del habla</span>
+      <span class="t2">Ejercicios · modos cuidador · PWA</span>
+    </a>
+    <a class="tool" href="tablero.html">
+      <span class="t1">Tablero de comunicación</span>
+      <span class="t2">Sí/No · dolor · frases · teclado · voz en español</span>
+    </a>
+  </div>
+  <p class="hint">Ruta: <code style="font-family:'Courier Prime',monospace;font-size:11px;color:var(--cream);">/victor-sr/</code></p>
+</main>
+</body>
+</html>
