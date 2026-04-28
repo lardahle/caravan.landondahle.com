@@ -4,6 +4,7 @@
 # If your FTP user is not chrooted to the site document root, add under `with:` below:
 #   server-dir: /public_html/caravan.landondahle.com/
 # (path must match what Site Tools shows for that subdomain.)
+# Node 24: checkout@v5 + FORCE_JAVASCRIPT_ACTIONS_TO_NODE24 (GitHub deprecation of Node 20 on runners).
 name: Deploy via FTP
 
 on:
@@ -15,9 +16,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
